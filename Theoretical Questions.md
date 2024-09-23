@@ -43,12 +43,12 @@ Let us first understand how YOLO encodes its output,
 Confidence = represents presence/absence of any object
 
 YOLO (You Only Look Once) has gained popularity in the field of object detection for several reasons:
-1.	Speed: YOLO is incredibly fast because it processes the entire image in a single pass through the neural network. This allows it to achieve real-time performance, processing images at up to 45 frames per second (FPS) or more1.
-2.	High Detection Accuracy: YOLO is known for its high accuracy in detecting objects with minimal background errors. It achieves this by framing object detection as a regression problem, predicting bounding boxes and class probabilities directly from full images1.
-3.	Simplicity: The architecture of YOLO is straightforward, using a single convolutional neural network (CNN) to predict multiple bounding boxes and class probabilities simultaneously. This simplicity makes it easier to implement and optimize2.
-4.	Better Generalization: YOLO has strong generalization capabilities, meaning it performs well on new, unseen data. This is particularly true for newer versions of YOLO, which have improved in handling various object sizes and aspect ratios1.
-5.	Context Awareness: Unlike traditional methods that use sliding windows or region proposals, YOLO looks at the entire image during training and testing. This helps it understand the context of objects within the image, reducing false positives2.
-6.	Open Source: YOLO is open-source, which makes it accessible to a wide range of developers and researchers. This has led to a large community contributing to its development and improvement1.
+1.	Speed: YOLO is incredibly fast because it processes the entire image in a single pass through the neural network. This allows it to achieve real-time performance, processing images at up to 45 frames per second (FPS) or more.
+2.	High Detection Accuracy: YOLO is known for its high accuracy in detecting objects with minimal background errors. It achieves this by framing object detection as a regression problem, predicting bounding boxes and class probabilities directly from full images.
+3.	Simplicity: The architecture of YOLO is straightforward, using a single convolutional neural network (CNN) to predict multiple bounding boxes and class probabilities simultaneously. This simplicity makes it easier to implement and optimize.
+4.	Better Generalization: YOLO has strong generalization capabilities, meaning it performs well on new, unseen data. This is particularly true for newer versions of YOLO, which have improved in handling various object sizes and aspect ratios.
+5.	Context Awareness: Unlike traditional methods that use sliding windows or region proposals, YOLO looks at the entire image during training and testing. This helps it understand the context of objects within the image, reducing false positives.
+6.	Open Source: YOLO is open-source, which makes it accessible to a wide range of developers and researchers. This has led to a large community contributing to its development and improvement.
 
 
 ### What is a Generative Adversarial Network (GAN), and how could it be used in image manipulation tasks?

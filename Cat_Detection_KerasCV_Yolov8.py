@@ -22,7 +22,7 @@ def detect_cat(image_path):
         image_path (str): Path to the image file.
 
     Returns:
-     x1, y1, w, h (int): Coordinates for the top-left (x1, y1) and bottom-right (x2, y2)
+     x1, y1, w, h (int): Coordinates for the top-left (x1, y1) and weigth, heigth (w, h)
                               of the region to be detected in the cat image.
     """
 
