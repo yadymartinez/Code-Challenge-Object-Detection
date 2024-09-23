@@ -22,7 +22,8 @@ def detect_cat(image_path):
     image_path (str): The path to the image where cats will be detected.
     
     Returns:
-    None: Displays the image with detected cat(s) highlighted.
+     x1, y1, x2, y2 (int): Coordinates for the top-left (x1, y1) and bottom-right (x2, y2)
+                              of the region to be detected in the cat image.
     """
     # Load the image using OpenCV
     image = cv2.imread(image_path)
@@ -55,7 +56,7 @@ def detect_cat(image_path):
     
     # Display the image with the detected cat(s) highlighted
     cv2_imshow(image)
-
+    return int(x1), int(y1),int(x2), int(y2)
    
 # Upload and test image
 from google.colab import files

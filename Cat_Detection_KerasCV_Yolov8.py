@@ -22,8 +22,10 @@ def detect_cat(image_path):
         image_path (str): Path to the image file.
 
     Returns:
-        None: The function displays the image with detected cats.
+     x1, y1, x2, y2 (int): Coordinates for the top-left (x1, y1) and bottom-right (x2, y2)
+                              of the region to be detected in the cat image.
     """
+
     # Load the image using PIL
     image = Image.open(image_path)
 
@@ -59,7 +61,7 @@ def detect_cat(image_path):
     # Remove axis and display the plot
     plt.axis("off")
     plt.show()
-
+    return int(x1), int(y1),int(h), int(w)
 
 # To use the function, upload an image and call detect_cat()
 
