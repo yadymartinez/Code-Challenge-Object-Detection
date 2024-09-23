@@ -54,15 +54,13 @@ def detect_cat(image_path_cat):
 
 
 # Step 4: Function to cut a piece of the image and replace it with another image
-def replace_image_piece(image_path_cat, image_path_dog, x1, y1, x2, y2):
+def detect_cat_replace_image_piece(image_path_cat, image_path_dog):
     """
     Cut a region from the main image and replace it with another image.
 
     Args:
         image_path_cat (str): Path to the main image.
         image_path_dog (str): Path to the image to replace the cut region.
-        x1, y1, x2, y2 (int): Coordinates for the top-left (x1, y1) and bottom-right (x2, y2)
-                              of the region to be replaced in the main image.
 
     Returns:
         None: Displays the modified image.
@@ -70,6 +68,8 @@ def replace_image_piece(image_path_cat, image_path_dog, x1, y1, x2, y2):
     # Load the main image and the replacement image
     main_image = cv2.imread(image_path_cat)
     replace_image = cv2.imread(image_path_dog)
+
+    x1, y1, x2, y2 = detect_cat(image_path_cat)
 
     # Get the dimensions of the region to replace (ROI)
     roi_width = x2 - x1
@@ -98,6 +98,5 @@ image_path_cat = list(uploaded.keys())[0]
 uploaded = files.upload()  # Upload the image file
 image_path_dog = list(uploaded.keys())[0]
 
-xc1, yc1, xc2, yc2 = detect_cat(image_path_cat)
 
-modified_image = replace_image_piece(image_path_cat, image_path_dog, xc1, yc1, xc2, yc2)
+modified_image = detect_cat_replace_image_piece(image_path_cat, image_path_dog)
