@@ -22,7 +22,7 @@ def detect_cat(image_path):
         image_path (str): Path to the image file.
 
     Returns:
-     x1, y1, x2, y2 (int): Coordinates for the top-left (x1, y1) and bottom-right (x2, y2)
+     x1, y1, w, h (int): Coordinates for the top-left (x1, y1) and bottom-right (x2, y2)
                               of the region to be detected in the cat image.
     """
 
@@ -53,7 +53,7 @@ def detect_cat(image_path):
          # Get the coordinates of the bounding box
          x1, y1, w, h = boxes[i]         
          # Draw a rectangle around the detected cat
-         plt.gca().add_patch(plt.Rectangle((int(x1), int(y1)), int(h), int(w),
+         plt.gca().add_patch(plt.Rectangle((int(x1), int(y1)), int(w), int(h),
                                           edgecolor='red', facecolor='none', linewidth=2))
          # Optionally, label the box with the score
          plt.text(x1, y1, f"Cat: {scores[i]:.2f}", color='white', backgroundcolor='red')
@@ -61,6 +61,7 @@ def detect_cat(image_path):
     # Remove axis and display the plot
     plt.axis("off")
     plt.show()
+    return int(x1), int(y1), int(w), int(h) 
     # To use the function, upload an image and call detect_cat()
 
 from google.colab import files
