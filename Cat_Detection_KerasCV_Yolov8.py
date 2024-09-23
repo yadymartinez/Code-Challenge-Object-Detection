@@ -61,9 +61,7 @@ def detect_cat(image_path):
     # Remove axis and display the plot
     plt.axis("off")
     plt.show()
-    return int(x1), int(y1),int(h), int(w)
-
-# To use the function, upload an image and call detect_cat()
+    # To use the function, upload an image and call detect_cat()
 
 from google.colab import files
 
