@@ -37,11 +37,7 @@ def detect_cat(image_path):
     # COCO class ID for 'cat' is 7
     cat_label = 7
 
-    # Create a plot to display the image with bounding boxes
-    plt.figure(figsize=(8, 8))
-    plt.imshow(image)
-
-    # KerasCV returns a dictionary with predictions: boxes, scores, and labels
+     # KerasCV returns a dictionary with predictions: boxes, scores, and labels
     boxes = predictions['boxes'][0]  # Bounding boxes
     scores = predictions['confidence'] [0] # Confidence scores
     labels = predictions['classes'][0] # Class labels
