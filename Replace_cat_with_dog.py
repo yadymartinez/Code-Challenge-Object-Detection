@@ -10,7 +10,7 @@ from google.colab import files
 
 
 # Step 4: Function to cut a piece of the image and replace it with another image
-def replace_image_piece(image_path_cat, image_path_dog, xc1, yc1, xc2, yc2):
+def replace_image_piece(image_path_cat, image_path_dog, x1, y1, x2, y2):
     """
     Cut a region from the main image and replace it with another image.
 
@@ -28,15 +28,15 @@ def replace_image_piece(image_path_cat, image_path_dog, xc1, yc1, xc2, yc2):
     replace_image = cv2.imread(image_path_dog)
 
     # Get the dimensions of the region to replace (ROI)
-    roi_width = xc2 - xc1
-    roi_height = yc2 - yc1
+    roi_width = x2 - x1
+    roi_height = y2 - y1
 
 
     # Resize the replacement image to fit the ROI in the main image
     replace_image_resized = cv2.resize(replace_image, (roi_width, roi_height))
 
     # Replace the region in the main image with the resized replacement image
-    main_image[yc1:yc2, xc1:xc2] = replace_image_resized
+    main_image[y1:y2, x1:x2] = replace_image_resized
 
     # Display the modified image
     cv2_imshow(main_image)
