@@ -3,9 +3,9 @@
 Image Classification helps us to classify what is contained in an image. Image Localization will specify the location of a single object in an image whereas Object 
 Detection specifies the location of multiple objects in the image.
 There are three types of image classification:
-•	Binary classification: Tags images with one of two possible labels (e.g., dog or not dog)
-•	Multi-class classification: Tags images with one of many possible labels (e.g., dog, cat, bird, squirrel, rabbit, deer, coyote, fox, etc.). Each image fits into one category.
-•	Multi-label classification: Can tag images with multiple labels (e.g., black, white, brown, red, orange, yellow, etc.) Each image can fit into multiple categories.
+* Binary classification: Tags images with one of two possible labels (e.g., dog or not dog)
+* Multi-class classification: Tags images with one of many possible labels (e.g., dog, cat, bird, squirrel, rabbit, deer, coyote, fox, etc.). Each image fits into one category.
+* Multi-label classification: Can tag images with multiple labels (e.g., black, white, brown, red, orange, yellow, etc.) Each image can fit into multiple categories.
 
 Object detection, on the other hand, identifies the location and number of specific objects in an image. Some businesses use object detection similar to how people use 
 image classification: to detect if something is present in an image. While image classification is typically the preferred method for this, users sometimes prefer object
@@ -13,11 +13,11 @@ detection when the target object is relatively small in the image.
 
 How to choose: image classification vs. object detection
 Choose image classification when:
-•	You want to classify or sort entire images into buckets.
-•	The location or number of objects in the image isn’t important.
+* You want to classify or sort entire images into buckets.
+* The location or number of objects in the image isn’t important.
 Choose object detection when:
-•	You need to identify the location or count of an object.
-•	The object you want identified is just a small part of the image and/or your images are noisy (aka, there’s a lot going on beyond just the object).
+* You need to identify the location or count of an object.
+* The object you want identified is just a small part of the image and/or your images are noisy (aka, there’s a lot going on beyond just the object).
 
 Object detection model architectures
 With object detection, though, CNNs are still the better choice, as they work better for bounding box detection. 
@@ -31,16 +31,18 @@ Transfer learning is a powerful technique in deep learning that allows you to le
 
 
 ### Describe the architecture of YOLO (You Only Look Once) and its advantages in real-time object detection.
-YOLO (You Only Look Once) is a real-time object detection system, first proposed in 2015 by Joseph Redmon and Ali Farhadi. The architecture is designed to perform bounding box detection and class prediction of objects in a single convolutional network scan, hence the name "You Only Look Once" (1).
+YOLO (You Only Look Once) is a real-time object detection system, first proposed in 2015 by Joseph Redmon and Ali Farhadi. The architecture is designed to perform bounding box detection and class prediction of objects in a single convolutional network scan, hence the name "You Only Look Once" .
+
 YOLO, a new approach to object detection. Prior work on object detection repurposes classifiers to perform detection. Instead, we frame object detection as a regression problem to spatially separated bounding boxes and associated class probabilities. A single neural network predicts bounding boxes and class probabilities directly from full images in one evaluation. Since the whole detection pipeline is a single network, it can be optimized end-to-end directly on detection performance.
 The YOLO algorithm revolutionized object detection by framing it as a single regression problem, predicting bounding boxes and class probabilities directly from full images in one evaluation. This streamlined approach has made YOLO synonymous with real-time detection capabilities.
 
 Let us first understand how YOLO encodes its output,
 1. Input image is divided into NxN grid cells. For each object present on image, one grid cell is responsible for predicting object.
 2. Each grid predicts ‘B’ bounding box and ‘C’ class probabilities. And bounding box consist of 5 components (x,y,w,h,confidence)
-(x,y) = coordinates representing center of box
-(w,h) = width and height of box
-Confidence = represents presence/absence of any object
+
+* (x,y) = coordinates representing center of box
+* (w,h) = width and height of box
+* Confidence = represents presence/absence of any object
 
 YOLO (You Only Look Once) has gained popularity in the field of object detection for several reasons:
 1.	Speed: YOLO is incredibly fast because it processes the entire image in a single pass through the neural network. This allows it to achieve real-time performance, processing images at up to 45 frames per second (FPS) or more.
@@ -55,8 +57,8 @@ YOLO (You Only Look Once) has gained popularity in the field of object detection
 A Generative Adversarial Network (GAN) is a type of machine learning model that consists of two neural networks, a Generator and a Discriminator, which are trained together in a competitive process. The primary objective of a GAN is to generate data (like images) that is indistinguishable from real data.
 
 How GANs Work:
-Generator: The generator's role is to create fake data, such as synthetic images, starting from random noise. It tries to "fool" the discriminator by generating data that resembles real images.
-Discriminator: The discriminator evaluates data (both real and generated) and predicts whether it is real or fake. The goal of the discriminator is to correctly identify real images from fake ones.
+* Generator: The generator's role is to create fake data, such as synthetic images, starting from random noise. It tries to "fool" the discriminator by generating data that resembles real images.
+* Discriminator: The discriminator evaluates data (both real and generated) and predicts whether it is real or fake. The goal of the discriminator is to correctly identify real images from fake ones.
 During training:
 
 The generator attempts to improve by generating more realistic data, learning to "trick" the discriminator.
@@ -80,9 +82,10 @@ GANs can be used to manipulate faces in various ways, such as altering facial ex
 This involves converting an image from one domain to another. For instance, turning a sketch into a photorealistic image or converting a grayscale image into a colorized version. GANs like pix2pix are used in this task.
 7. Content Creation for Games and Movies:
 GANs are used to generate assets like textures, characters, or environments in creative industries. This helps streamline the production process, reducing the time and effort needed to manually create visual content.
+
 Why GANs Are Powerful for Image Manipulation:
 
-Realism: GANs are known for their ability to produce highly realistic images that are often difficult to distinguish from real ones.
-Versatility: GANs can perform a wide range of tasks, from generating entirely new images to manipulating and enhancing existing ones.
-Learning from Unlabeled Data: GANs do not require labeled data, making them highly effective in situations where annotated datasets are unavailable.
+* Realism: GANs are known for their ability to produce highly realistic images that are often difficult to distinguish from real ones.
+* Versatility: GANs can perform a wide range of tasks, from generating entirely new images to manipulating and enhancing existing ones.
+* Learning from Unlabeled Data: GANs do not require labeled data, making them highly effective in situations where annotated datasets are unavailable.
 

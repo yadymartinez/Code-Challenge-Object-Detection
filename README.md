@@ -1,10 +1,23 @@
 # Code-Challenge-Object-Detection
 
 
+# Install tensorflow keras-cv package for Colab
+!pip install tensorflow keras-cv
+
+# Import necessary libraries
+import tensorflow as tf
+
+from PIL import Image
+
+import keras_cv
+
+import matplotlib.pyplot as plt
+
+from google.colab import files
 
 # Function to detect cats (Cat_Detection_KerasCV_Yolov8.py)
-
 def detect_cat(image_path):
+
     """
     Function to detect cats in an image using YOLOv8 model.
 
@@ -19,9 +32,27 @@ def detect_cat(image_path):
      Pre-trained model: keras_cv.models.YOLOV8Detector (yolo_v8_m_pascalvoc).
                        
     """
-# Function to detect cats (Cat_Detection_Ultralytics.py)----Best Model Results
 
+
+# Install ultralytics package for YOLOv8
+!pip install ultralytics
+
+# Import necessary libraries
+from ultralytics import YOLO
+
+import tensorflow as tf
+
+import matplotlib.pyplot as plt
+
+import cv2
+
+from google.colab import files
+
+from google.colab.patches import cv2_imshow  # For displaying images in Colab
+
+# Function to detect cats (Cat_Detection_Ultralytics.py)----Better Results
 def detect_cat(image_path):
+
     """
     Function to detect cats in an image using YOLOv8 model.
 
@@ -37,8 +68,10 @@ def detect_cat(image_path):
                        
     """
 
-# Function to replace a detected cat with a pre-defined dog image (Replace_Cat_With_Dog.py)    
+# Function to replace a detected cat with a pre-defined dog image (Replace_Cat_With_Dog.py) 
+
 def replace_image_piece(image_path_cat, image_path_dog, x1, y1, x2, y2):
+
     """
     Cut a region from the main image and replace it with another image.
 
@@ -56,6 +89,7 @@ def replace_image_piece(image_path_cat, image_path_dog, x1, y1, x2, y2):
 # Function to replace a detected cat with a pre-defined dog image (Replace_Cat_With_Dog.py)    
 
 def detect_cat_replace_image_piece(image_path_cat, image_path_dog):
+
     """
     Cut a region from the main image and replace it with another image.
 
