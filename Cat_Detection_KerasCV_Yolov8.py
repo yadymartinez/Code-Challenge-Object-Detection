@@ -2,13 +2,11 @@
 # Import necessary libraries
 
 import tensorflow as tf
-import cv2
 from PIL import Image
 import keras_cv
 import matplotlib.pyplot as plt
-import numpy as np
 from google.colab import files
-from google.colab.patches import cv2_imshow  # To display images in Colab
+
 
 # Load pre-trained YOLOv8 model
 model = keras_cv.models.YOLOV8Detector.from_preset(
